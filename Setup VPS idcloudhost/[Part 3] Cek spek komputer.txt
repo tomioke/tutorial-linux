@@ -1,0 +1,3 @@
+Benchmark spesifikasi dan kecepatan VM
+
+$ wget -qO- bench.sh | bash
