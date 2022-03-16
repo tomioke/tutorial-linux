@@ -1,4 +1,4 @@
-IP: 103.176.78.224
+IP: <your_ip>
 Pastikan sudah masuk root mode
 
 $ apt update && apt upgrade -y
@@ -28,6 +28,6 @@ $ vncserver
 $ sudo apt-get update
 $ sudo apt-get install firefox -y
 
-Buka vnc-viewer masukkan 103.176.78.224:1, masuk pilih use default config
+Buka vnc-viewer masukkan <your_ip>:1, masuk pilih use default config
 
 
