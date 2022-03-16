@@ -1,0 +1,34 @@
+https://console.idcloudhost.com/
+
+IP : <ip vps kamu>
+User : <akun user> (belum full root)
+Pass : <password kamu>
+
+Buka ssh config putty gen
+
+Generate usap" di blank page
+
+Save private key
+
+Buat IP jika belum, kalau sudah ada masuk ke network lalu, pilih ip sesuai region
+
+Pada assgn to pilih server yang sudah di build tadi, tunggu sampai cpu turun.
+
+$ sudo -i
+
+pass baru : <...> enter 2 kali
+
+$ nano /etc/ssh/sshd_config
+
+scroll ke bawah sendiri copy paste code ini:
+PermitRootLogin yes
+PubkeyAuthentication no
+
+ctrl+x, y lalu enter
+
+$ systemctl restart ssh
+$ exit, exit
+
+Sekarang sudah bisa login dengan root
+user : root
+pass : <password baru dari root>
