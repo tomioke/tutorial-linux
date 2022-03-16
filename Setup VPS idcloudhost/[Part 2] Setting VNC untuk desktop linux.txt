@@ -1,0 +1,33 @@
+IP: 103.176.78.224
+Pastikan sudah masuk root mode
+
+$ apt update && apt upgrade -y
+
+ada notif pilih no atau N
+
+$ apt install xfce4 xfce4-goodies -y
+$ apt install tightvncserver -y
+$ vncserver
+
+Password : ...
+Klik y,
+Password samakan dengan yang tadi
+
+$ vncserver -kill :1
+$ mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+$ nano  ~/.vnc/xstartup
+(Pastekan sesuai perintah)
+
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+
+$ chmod +x ~/.vnc/xstartup
+$ vncserver
+
+$ sudo apt-get update
+$ sudo apt-get install firefox -y
+
+Buka vnc-viewer masukkan 103.176.78.224:1, masuk pilih use default config
+
+
