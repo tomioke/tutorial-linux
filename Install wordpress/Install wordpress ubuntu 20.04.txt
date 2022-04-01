@@ -1,0 +1,141 @@
+Referensi :
+https://lms.onnocenter.or.id/wiki/index.php/Install_WordPress_di_Ubuntu_20.04_dgn_Apache2_MariaDB_PHP7
+https://hax.co.id/register
+
+https://hax.co.id/login
+
+Spesifikasi 
+
+OS : Ubuntu 20.04
+
+Install package bahasa indo [Optional]
+$ cd /etc/apt
+$ nano sources.list
+
+deb http://mirror.biznetgio.com/ubuntu/ focal main restricted universe multiverse
+deb http://mirror.biznetgio.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://mirror.biznetgio.com/ubuntu/ focal-security main restricted universe multiverse
+deb http://mirror.biznetgio.com/ubuntu/ focal-backports main restricted universe multiverse
+deb http://mirror.biznetgio.com/ubuntu/ focal-proposed main restricted universe multiverse
+
+Referensi : https://www.linuxid.net/35636/daftar-repository-lokal-ubuntu-20-04-focal-fossa/
+
+$ apt update
+
+Install nano
+
+$ sudo apt-get install nano
+$ nano --version
+
+Install ufw ubuntu
+
+$ sudo apt install ufw
+
+Enable IPV6
+$ sudo nano /etc/default/ufw
+
+Check in :
+
+IPV6=yes
+
+ufw settings
+
+$ sudo ufw default deny incoming
+$ sudo ufw default allow outgoing
+$ sudo ufw app list
+$ sudo -y ufw enable
+$ sudo ufw status
+$ sudo ufw allow OpenSSH
+$ sudo ufw show added
+
+Install Apache2
+
+$ sudo apt -y install apache2
+$ sudo systemctl apache2 status
+$ sudo ufw allow 'Apache'
+$ sudo ufw status
+
+http://server_address
+OR
+http://your-domain.com
+
+Install PHP 7.4
+
+$ sudo apt -y install software-properties-common
+$ sudo add-apt-repository ppa:ondrej/php
+$ sudo apt update
+$ sudo apt -y install php7.4
+
+$ sudo apt -y install php7.4-common php7.4-mysql php7.4-xml php7.4-xmlrpc \
+php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev \
+php7.4-imap php7.4-mbstring php7.4-opcache php7.4-soap \
+php7.4-zip php7.4-cli php7.4-intl \
+imagemagick git unzip zip libgd-dev libapache2-mod-php libphp-adodb
+
+$ sudo nano /etc/php/7.4/apache2/php.ini
+
+Cari dengan Ctrl + /, kemudian Ctrl + t, hapus Ctrl + k
+
+upload_max_filesize = 100M
+post_max_size = 48M
+memory_limit = 512M
+max_execution_time = 600
+max_input_vars = 3000
+max_input_time = 1000
+
+$ sudo systemctl restart apache2.service
+
+$ sudo nano /var/www/html/phpinfo.php
+
+<?php phpinfo( ); ?>
+
+Install mariaDB
+$ sudo apt -y install wget
+$ sudo apt -y install mariadb-client mariadb-server
+$ sudo systemctl status mariadb.service
+$ sudo mysql -u root -p
+
+update mysql.user set plugin='' where user='root';
+
+plugin kosong sama dengan password kosong enter saja
+
+exit
+
+$ /etc/init.d/mysql restart
+
+Unduh wordpress 
+
+$ wget -c https://id.wordpress.org/latest-id_ID.tar.gz
+$ cp latest-id_ID.tar.gz /var/www/html/
+$ cd /var/www/html  -> ls -la
+$ tar zxvf latest-id_ID.tar.gz
+$ cd /var/www/html/wordpress
+$ chmod -Rf 777 /var/www/html/wordpress/wp-content/
+
+$ cd /var/www/html/wordpress
+$ cp wp-config-sample.php wp-config.php
+$ nano wp-config.php
+
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'wordpress');
+define('DB_PASSWORD', '123456');
+define('DB_HOST', 'localhost');
+
+Atur root MariaDB password masuk
+$ mariadb > SET PASSWORD FOR root@localhost=PASSWORD('123456');
+
+$ mariadb > create database wordpress; # wordpress = database_name
+$ mariadb > CREATE USER 'wordpress'@localhost IDENTIFIED BY '123456';
+$ mariadb > grant INSERT,SELECT on root.* to wordpress@localhost; # wordpress = user database
+$ grant CREATE, INSERT, SELECT, DELETE, UPDATE on wordpress.* to wordpress@localhost identified by 'trialwordpress';
+$ grant CREATE, INSERT, SELECT, DELETE, UPDATE on wordpress.* to wordpress identified by 'trialwordpress';
+
+$ sudo nano /var/www/html/wordpress/wp-config.php
+
+Update password database
+
+define('DB_PASSWORD', 'trialwordpress');
+
+Restart web server
+/etc/init.d/apache2 restart
+/etc/init.d/mysql restart
