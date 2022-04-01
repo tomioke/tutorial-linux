@@ -1,3 +1,7 @@
 Benchmark spesifikasi dan kecepatan VM
 
 $ wget -qO- bench.sh | bash
+
+Alternatif
+
+$ wget -qO- wget.racing/nench.sh | bash; wget -qO- wget.racing/nench.sh | bash 2>&1 | tee nench.log
