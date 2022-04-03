@@ -1,0 +1,46 @@
+$ sudo apt update -y
+
+$ apt install -y make build-essential libssl-dev zlib1g-dev \
+libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev \
+libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl \
+git
+
+$  curl https://pyenv.run | bash
+
+pyenv: The actual pyenv application
+
+pyenv-virtualenv: Plugin for pyenv and virtual environments
+
+pyenv-update: Plugin for updating pyenv
+
+pyenv-doctor: Plugin to verify that pyenv and build dependencies are installed
+
+pyenv-which-ext: Plugin to automatically lookup system commands
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc 
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc 
+echo 'eval "$(pyenv init --path)"' >> ~/.bashrc 
+echo 'eval "$(pyenv init -)"' >> ~/.bashrc 
+
+$ exec $SHELL
+$ pyenv update
+$ which pyenv
+
+List python 3.6 > 3.8
+
+$ pyenv install --list | grep " 3\.[678]"
+
+Cek versi python yang terinstall
+$ pyenv versions
+
+Install python 2.7
+
+$ pyenv install 2.7.10
+
+Install Python 3.7.3
+
+$ pyenv install 3.7.3
+
+Setting versi global atau jadi default
+
+$ pyenv global 3.7.3
