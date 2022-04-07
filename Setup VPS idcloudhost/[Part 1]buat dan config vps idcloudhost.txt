@@ -21,6 +21,8 @@ pass baru : <...> enter 2 kali
 $ nano /etc/ssh/sshd_config
 
 scroll ke bawah sendiri copy paste code ini:
+
+# Login tanpa permission key lagi
 PermitRootLogin yes
 PubkeyAuthentication no
 
