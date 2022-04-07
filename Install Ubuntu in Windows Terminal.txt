@@ -1,0 +1,39 @@
+Buat VPS Gratis di Hax.co.id dan Settings Windows Terminal
+
+- Cari yang open di https://hax.co.id/create-vps/, cari OpenVZ kalo tidak terserah apa aja
+IPv6  	  	: 2a01:4f8:211:1e1a:face:05d0:b2c3:0001
+Hostname		: 778060658_hax.localdomain
+Username 	: root
+Passsword	: 123456
+Valid until 		: April 14, 2022
+
+- Buat IPv4 di https://hax.co.id/ipv6-to-ipv4/, Pilih IP dan Port kemudian Copas IPv6 dan port 22
+
+IPv4 : 		: 91.134.238.135:5090
+
+- Buka Windows terminal, kalau belum ada download di windows store
+
+- Pilih panah bawah, pilih yang settings
+
+- Pada menu Profile, klik yg Add new Profile
+
+- Pilih Command Prompt, Ganti nama Ubuntu ... atau linux lainnya sesuai installnyy
+
+- Pada command line masukkan skrip:
+
+ssh -p <no port> root@<ip kamu>
+
+- Jika sukses login install dependency update 
+
+$ apt-get update && apt-get install -y wget unzip
+
+- Cek spek :
+
+$ lscpu
+
+- Test speed internet
+
+$ sudo apt-get install curl -Y
+$ curl -s https://install.speedtest.net/app/cli/install.deb.sh | sudo bash
+$ sudo apt-get install speedtest
+$ speedtest
