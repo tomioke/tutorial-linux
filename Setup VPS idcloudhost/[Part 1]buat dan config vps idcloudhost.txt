@@ -16,7 +16,7 @@ Pada assgn to pilih server yang sudah di build tadi, tunggu sampai cpu turun.
 
 $ sudo su
 $ cd
-$ sudo -i
+$ sudo passwd root
 
 pass baru : <...> enter 2 kali
 
