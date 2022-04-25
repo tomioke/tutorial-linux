@@ -14,6 +14,8 @@ Buat IP jika belum, kalau sudah ada masuk ke network lalu, pilih ip sesuai regio
 
 Pada assgn to pilih server yang sudah di build tadi, tunggu sampai cpu turun.
 
+$ sudo su
+$ cd
 $ sudo -i
 
 pass baru : <...> enter 2 kali
