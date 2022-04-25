@@ -22,6 +22,8 @@ pass baru : <...> enter 2 kali
 
 $ nano /etc/ssh/sshd_config
 
+To search for text in nano, press Ctrl-W
+
 scroll ke bawah sendiri copy paste code ini:
 
 # Login tanpa permission key lagi
