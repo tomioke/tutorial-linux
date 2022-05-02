@@ -1,0 +1,40 @@
+Pastikan sudah dapat ip lokal dari routerny. dan bila beda router bisa di ubah.
+Disini IP ya bisa dilihat dengan command
+Ubuntu 18.04 pada virtual box
+dan diremote dengan ssh putty
+
+$ ifconfig
+
+Maka dapat data, inet 192.168.0.105  netmask 255.255.255.0  broadcast 192.168.0.255
+Misal kita akan buat ip statis untuk 192.168.0.10
+
+$ cd /etc/netplan
+$ ls -la
+$ cp 00-installer-config.yaml backup.yaml
+$ sudo nano 00-installer-config.yaml
+
+Alt + Shift A, ctrl + K
+
+Masukkan script
+
+network:
+ version: 2
+ renderer: networkd
+ ethernets:
+  enp0s3:
+   dhcp4: no
+   # IP Address/Subnet mask
+   addresses: [192.168.0.10/24]
+   # Default gateway
+   gateway4: 192.168.0.1
+   nameservers:
+    # name server this host refers
+    addresses: [8.8.4.4,8.8.8.8]
+   dhcp6: no
+
+save exit
+
+$ cd
+$ sudo netplan --debug apply
+
+Note jika koneksi gagal maka tinggal ubah saja IP dari Gateway sesuai IP router bawaan.
