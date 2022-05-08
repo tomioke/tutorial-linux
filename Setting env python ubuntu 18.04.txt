@@ -37,6 +37,16 @@ Install python 2.7
 
 $ pyenv install 2.7.10
 
+Jika error seperti ini : 
+ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib
+
+sudo apt-get -y remove libssl-dev \ 
+sudo apt-get -y update \ 
+sudo apt-get -y install libssl1.0-dev
+
+Ulangi langkah install sebelumnya
+
+
 Install Python 3.7.3
 
 $ pyenv install 3.7.3
