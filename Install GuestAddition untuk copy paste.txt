@@ -1,0 +1,9 @@
+- Buka terminal dengan Ctrl + Alt + T
+- sudo apt install update
+- sudo apt install build-essential dkms linux-headers-$(uname -r)
+- Matikan vm, masuk ke pengaturan -> storage -> pengaturan yang ada file vm.vdi
+- Sebelahnya pilih yang + optical device -> pilih file guestaddition -> nyalakan kembali vm
+- Buka terminal lagi cd /media/<nama_user>/<versi_guestaddition_virtualbox>
+- ls
+- sudo ./VBoxLinuxAdditions.run
+- Restart dan selesai
