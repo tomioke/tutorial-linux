@@ -54,7 +54,8 @@ If you cannot access the panel,
 
 release the following port (7800|888|80|443|20|21) in the security group
 
-
+ > Enter Settings 
+ 
 for manage Aapanel using command in root mode:
 ```
  bt
