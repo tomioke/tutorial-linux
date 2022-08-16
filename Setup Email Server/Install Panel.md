@@ -6,6 +6,25 @@ https://forum.aapanel.com/d/276-how-to-bind-domain-to-my-server-ip-address-dns-c
 
 Tools
  - Terminus
+ 
+ Pastikan settings repo:
+ ```
+ sudo su
+ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+ cat /etc/apt/sources.list
+ ```
+ 
+ Pastikan:
+  ```
+deb http://id.archive.ubuntu.com/ubuntu/ focal main restricted universe multiverse
+deb http://id.archive.ubuntu.com/ubuntu/ focal-updates main restricted universe multiverse
+deb http://id.archive.ubuntu.com/ubuntu/ focal-backports main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu focal-security main restricted universe multiverse
+ ```
+ Sett repo:
+  ```
+  sudo apt update
+  ```
 
 Install panel in server ubuntu 20.04
 ```
