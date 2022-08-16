@@ -16,17 +16,25 @@ $ wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && s
  Wait for process completed..
  
  Copy and save file in here:
+ 
  Congratulations! Installed successfully!
-==================================================================
+
 aaPanel Internet Address: http://your_ip:7800/reff
 
 aaPanel Internal Address: http://your_ip:7800/reff
+
 username: xxxxxx
+
 password: xxxxxx
+
 Warning:
+
 If you cannot access the panel, 
+
 release the following port (7800|888|80|443|20|21) in the security group
-==================================================================
+
 
 for manage Aapanel using command in root mode:
+```
 $ bt
+```
