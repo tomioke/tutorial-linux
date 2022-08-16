@@ -9,7 +9,7 @@ Tools
 
 Install panel in server ubuntu 20.04
 ```
-$ wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && sudo bash install.sh 93684c35
+ wget -O install.sh http://www.aapanel.com/script/install-ubuntu_6.0_en.sh && sudo bash install.sh 93684c35
 ```
  > Select y
  
@@ -38,5 +38,5 @@ release the following port (7800|888|80|443|20|21) in the security group
 
 for manage Aapanel using command in root mode:
 ```
-$ bt
+ bt
 ```
