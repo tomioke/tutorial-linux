@@ -28,6 +28,44 @@ startxfce4 &
 $ chmod +x ~/.vnc/xstartup
 $ vncserver
 
+## Running VNC as a System Service (Root Mode)
+
+$ sudo nano /etc/systemd/system/vncserver@.service
+
+Add it
+
+=============================================================================
+[Unit]
+Description=Start TightVNC server at startup
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=your_user
+Group=
+WorkingDirectory=/home/your_user
+
+PIDFile=/root/.vnc/%H:%i.pid
+ExecStartPre=-/usr/bin/vncserver -kill :%i > /dev/null 2>&1
+ExecStart=/usr/bin/vncserver -depth 24 -geometry 1280x800 :%i
+ExecStop=/usr/bin/vncserver -kill :%i
+
+[Install]
+WantedBy=multi-user.target
+=============================================================================
+
+Next, make the system aware of the new unit file.
+$ sudo systemctl daemon-reload
+
+Enable the unit file.
+$ sudo systemctl enable vncserver@1.service
+
+Stop the current instance of the VNC server if it’s still running.
+$ vncserver -kill :1
+
+Then start it as you would start any other systemd service.
+$ sudo systemctl start vncserver@1
+
 $ sudo apt-get update
 $ sudo apt-get install firefox -y
 
