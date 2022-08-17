@@ -15,13 +15,15 @@ Klik y,
 Password samakan dengan yang tadi
 
 $ vncserver -kill :1
-$ mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
-$ nano  ~/.vnc/xstartup
+$ sudo mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+$ sudo nano  ~/.vnc/xstartup
 (Pastekan sesuai perintah)
 
+=============================================================================
 #!/bin/bash
 xrdb $HOME/.Xresources
 startxfce4 &
+=============================================================================
 
 $ chmod +x ~/.vnc/xstartup
 $ vncserver
