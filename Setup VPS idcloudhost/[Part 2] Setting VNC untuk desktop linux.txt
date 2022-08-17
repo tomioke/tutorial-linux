@@ -5,8 +5,9 @@ $ apt update && apt upgrade -y
 
 ada notif pilih no atau N
 
-$ apt install xfce4 xfce4-goodies -y
-$ apt install tightvncserver -y
+$ sudo apt install xfce4 xfce4-goodies -y
+ > select gdm3
+$ sudo apt install tightvncserver -y
 $ vncserver
 
 Password : ...
