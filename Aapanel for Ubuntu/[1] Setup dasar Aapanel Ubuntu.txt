@@ -1,4 +1,11 @@
-System requirements:
+Minimal System requirements:
+
+OS : Ubuntu 20.04
+CPU : 1 Core
+RAM : 2 GB
+Disk : 20 GB
+
+Recomended System requirements:
 
 OS : Ubuntu 20.04
 CPU : 2 Core
