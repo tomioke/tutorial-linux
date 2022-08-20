@@ -45,6 +45,6 @@ https://www.youtube.com/watch?v=auM624ebKxY
 ## Copy paste private key and certificate key in form and click force https, apply settings
 
 ## Ini status nya jika berhasil
-![bag 15](https://user-images.githubusercontent.com/40717020/185754458-f47fd8e4-8422-42c1-8043-8591a8016dd8.png)
+![bag 15](https://user-images.githubusercontent.com/40717020/185754537-2679e462-49b2-4652-bc21-2803a910d068.png)
 
 
