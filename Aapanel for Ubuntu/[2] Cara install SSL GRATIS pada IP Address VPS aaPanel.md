@@ -14,3 +14,15 @@ https://www.youtube.com/watch?v=auM624ebKxY
 
 ## Pilih new certificate
 ![bag 4](https://user-images.githubusercontent.com/40717020/185752856-fb9f5355-505d-4a9e-8cc5-19a5b2a997f1.png)
+
+## Untuk validity pilih yang free 90-day
+![bag 5](https://user-images.githubusercontent.com/40717020/185753090-28fb69ec-b65d-4680-89ef-d24106056cc4.png)
+
+## Next aja default
+![bag 6](https://user-images.githubusercontent.com/40717020/185753169-f4bcd406-b9b9-4f86-89e7-ff6e370b0f54.png)
+
+## Pastikan free sudah selected, Next
+![bag 7](https://user-images.githubusercontent.com/40717020/185753202-6732ee7c-d831-4ca4-aaf1-a9f131597330.png)
+
+## Pada panel, document root masuk
+![bag 8](https://user-images.githubusercontent.com/40717020/185753301-f04e1ff9-25cd-41c5-932f-eb2246c8759d.png)
