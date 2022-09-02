@@ -21,13 +21,13 @@ https://www.youtube.com/watch?v=auM624ebKxY
 ## Next aja default
 ![bag 6](https://user-images.githubusercontent.com/40717020/185753169-f4bcd406-b9b9-4f86-89e7-ff6e370b0f54.png)
 
-## Pastikan free sudah selected, Next nanti pilih yang http upload
+## Pastikan free sudah selected, Next 
 ![bag 7](https://user-images.githubusercontent.com/40717020/185753202-6732ee7c-d831-4ca4-aaf1-a9f131597330.png)
 
 ## Pada panel, document root masuk
 ![bag 8](https://user-images.githubusercontent.com/40717020/185753301-f04e1ff9-25cd-41c5-932f-eb2246c8759d.png)
 
-## Buat direktori ./well-known/pki-validation
+## Buat direktori ./well-known/pki-validation, copy nama dan skrip didalamnya
 ![bag 9](https://user-images.githubusercontent.com/40717020/185753564-4a05ba1c-f2ba-4192-aac9-d050a0919211.png)
 
 ## Buat ftp untuk transfer file
