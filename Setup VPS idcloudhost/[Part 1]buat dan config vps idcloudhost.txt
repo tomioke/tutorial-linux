@@ -34,6 +34,9 @@ PubkeyAuthentication no
 ctrl+x, y lalu enter
 
 $ systemctl restart ssh
+
+$ sudo apt install net-tools
+
 $ exit, exit
 
 Sekarang sudah bisa login dengan root
