@@ -1,0 +1,43 @@
+Untuk mengaktifkan UFW (Uncomplicated Firewall) di Ubuntu, Anda dapat mengikuti langkah-langkah berikut:
+
+1. Pastikan Anda telah masuk ke sistem Ubuntu sebagai pengguna dengan hak superuser atau dengan akses root.
+
+2. Ketik perintah berikut untuk mengaktifkan UFW:
+
+ $ sudo ufw enable
+
+3. Anda akan diminta untuk memasukkan kata sandi pengguna dengan hak superuser atau root. Ketikkan kata sandi dan tekan Enter.
+
+4. Setelah itu, UFW akan diaktifkan dan mulai menjalankan kebijakan firewall yang telah dikonfigurasi sebelumnya.
+
+5. Anda dapat menggunakan perintah berikut untuk memeriksa status UFW:
+
+ $ sudo ufw status
+
+6. Jika UFW berhasil diaktifkan, Anda akan melihat output yang menyatakan "Status: active" dan daftar aturan firewall yang diterapkan.
+
+Catatan: Pastikan Anda telah mengkonfigurasi aturan firewall yang sesuai sebelum mengaktifkan UFW. Jika tidak, Anda mungkin memblokir akses ke layanan yang diperlukan atau mengalami masalah dengan koneksi internet.
+
+Sekarang UFW telah diaktifkan dan akan mulai menjalankan kebijakan firewall yang telah dikonfigurasi sebelumnya di Ubuntu.
+
+[PENTING!!] 
+
+Untuk membuka akses port OpenSSH (port 22) melalui UFW di Ubuntu, ikuti langkah-langkah berikut:
+
+- Pastikan Anda telah mengaktifkan UFW seperti yang dijelaskan sebelumnya.
+- Untuk membuka akses port SSH (port 22), ketik perintah berikut:
+
+ $ sudo ufw allow ssh
+
+Perintah di atas akan menambahkan aturan firewall yang mengizinkan koneksi masuk melalui port 22.
+
+- Setelah itu, Anda dapat memeriksa status UFW untuk memastikan bahwa aturan SSH telah ditambahkan dengan benar:
+
+- Setelah itu, Anda dapat memeriksa status UFW untuk memastikan bahwa aturan SSH telah ditambahkan dengan benar:
+
+ $ sudo ufw status
+
+Anda akan melihat output yang menyebutkan bahwa port 22 (SSH) diizinkan.
+
+Sekarang akses port OpenSSH telah dibuka melalui UFW di Ubuntu. Anda dapat terhubung ke server menggunakan SSH melalui port 22.
+
