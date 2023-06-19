@@ -1,0 +1,26 @@
+Untuk mengubah nama sumber daya di Ubuntu, Anda biasanya perlu memodifikasi file konfigurasi atau pengaturan yang sesuai. Berikut adalah pendekatan umum untuk mengubah nama sumber daya di Ubuntu:
+
+1. Melakukan update pada file hostname
+ - Buka terminal
+ - Ketik perintah berikut untuk membuka file konfigurasi hostname:
+
+  $ sudo nano /etc/hostname
+
+ - Ganti nama host yang ada dengan nama yang diinginkan.
+ - Simpan file dengan Ctrl+X Y dan keluar dari editor teks. (Disini menggunakan    termius emulator di Windows 10).
+
+2. Perbarui file host:
+ - Ketik perintah berikut untuk membuka file host:
+
+ $ sudo nano /etc/hosts
+
+ - Cari baris yang berisi nama host lama (biasanya dengan alamat IP yang diikuti nama host).
+ - Ganti nama host lama dengan nama host baru.
+ - Simpan file dan keluar dari editor teks.
+
+3. Nyalakan ulang sistem:
+ - Ketik perintah berikut untuk mem-boot ulang sistem:
+
+ $ sudo reboot
+
+ - Setelah reboot, sistem akan mulai menggunakan nama sumber daya yang baru.
