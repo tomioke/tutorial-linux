@@ -14,9 +14,10 @@ Buat IP jika belum, kalau sudah ada masuk ke network lalu, pilih ip sesuai regio
 
 Pada assgn to pilih server yang sudah di build tadi, tunggu sampai cpu turun.
 
+$ sudo apt update
+$ sudo apt install net-tools
 $ sudo su
 $ cd
-$ sudo apt update
 $ sudo passwd root
 
 pass baru : <...> enter 2 kali
@@ -30,12 +31,12 @@ scroll ke bawah sendiri copy paste code ini:
 # Login tanpa permission key lagi
 PermitRootLogin yes
 PubkeyAuthentication no
+ClientAliveInterval 60
+ClientAliveCountMax 120
 
 ctrl+x, y lalu enter
 
 $ systemctl restart ssh
-
-$ sudo apt install net-tools
 
 $ exit, exit
 
